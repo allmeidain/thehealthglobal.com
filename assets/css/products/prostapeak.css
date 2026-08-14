@@ -1,0 +1,21 @@
+/* Prostapeak Theme Overrides */
+:root {
+  --navy-1: #005598;
+  --navy-2: #003763;
+  --testimonial-navy: #00436f;
+  --panel-gray: #eef5fb;
+  --cta-1: #f8e17a;
+  --cta-2: #efd450;
+  --cta-hover-1: #efd450;
+  --cta-hover-2: #d9b93a;
+  --badge-border: rgba(194,218,237,.6);
+}
+
+/* Hero bottle photo is a tall 1005x1590 portrait shot (not the near-square
+   crop reviews.css assumes at width:54%), so it renders far taller than
+   other product heroes at that default. Narrower width normalizes the
+   rendered height back in line with the rest of the site on desktop;
+   mobile already caps via reviews.css's max-width/max-height rule. */
+@media (min-width: 768px) {
+  .hero-image img { width: 18%; }
+}
