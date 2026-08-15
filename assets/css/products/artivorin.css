@@ -1,0 +1,12 @@
+/* Artivorin Theme Overrides */
+:root {
+  --navy-1: #16418f;
+  --navy-2: #103884;
+  --testimonial-navy: #103884;
+  --panel-gray: #f4f6fa;
+  --cta-1: #ffe000;
+  --cta-2: #e3ce04;
+  --cta-hover-1: #e3ce04;
+  --cta-hover-2: #c9b400;
+  --badge-border: #e3ce04;
+}
