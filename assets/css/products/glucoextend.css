@@ -1,0 +1,21 @@
+/*
+  Paleta por produto -- GlucoExtend.
+  Sobrescreve os tokens de cor (:root) de ../reviews.css para refletir a
+  identidade visual real do rotulo oficial do produto (goglucoextend.com),
+  mantendo layout/estrutura do MODELO REVIEW intactos (so cores mudam).
+  Rotulo do frasco: branco com faixa "Supports Healthy Blood Sugar Levels"
+  em vermelho -- vermelho vira header/banner/testimonial (--navy-*), dourado
+  padrao do projeto (tambem presente na pagina oficial) vira CTA.
+  Tokens em data/produtos/glucoextend.json -> theme_tokens.
+*/
+:root{
+  --navy-1:#dd0000;
+  --navy-2:#8c0000;
+  --testimonial-navy:#a30000;
+  --panel-gray:#fdf0ef;
+  --cta-1:#fdd424;
+  --cta-2:#efd450;
+  --cta-hover-1:#ffe66b;
+  --cta-hover-2:#e0b400;
+  --badge-border:rgba(253,212,36,.6);
+}
