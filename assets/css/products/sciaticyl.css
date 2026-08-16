@@ -1,0 +1,16 @@
+/* Sciaticyl Theme Overrides */
+:root {
+  --navy-1: #1f243c;
+  --navy-2: #001122;
+  --testimonial-navy: #1f243c;
+  --panel-gray: #eef6fa;
+  --badge-border: rgba(42,171,211,.6);
+}
+
+/* Hero bottle photo is a tall 290x481 portrait shot, taller than the near-square
+   crop reviews.css assumes at width:54% — it pushes the first section's title
+   out of the first fold on desktop. Capping the height only on desktop normalizes
+   it back in line with the rest of the site (mobile already caps via reviews.css). */
+@media (min-width: 768px) {
+  .hero-image img { width: auto; max-height: 380px; object-fit: contain; }
+}
