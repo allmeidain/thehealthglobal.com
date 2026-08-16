@@ -1,0 +1,33 @@
+/*
+  Paleta por produto -- Hormovance.
+  Sobrescreve os tokens de cor (:root) de ../reviews.css para refletir a
+  identidade visual real do rotulo oficial e dos criativos da oferta
+  (hormovance.shop/pv -> assets em agenusdev.s3.amazonaws.com), mantendo
+  layout/estrutura do MODELO REVIEW intactos (so cores mudam).
+  Rotulo do frasco: branco/creme (#f4f0ed) com navy profundo (#142642) e
+  detalhes dourados (#d3a052 / #a1793b). O navy vira barra superior, faixas H2
+  e cards de depoimento (--navy-*); o creme vira o painel lateral; o dourado
+  vira CTA e borda do selo -- que tambem e a convencao de CTA do site e mantem
+  legivel o texto preto do botao.
+  Tokens em data/produtos/hormovance.json -> theme_tokens.
+*/
+:root{
+  --navy-1:#1c3155;
+  --navy-2:#0a1728;
+  --testimonial-navy:#142642;
+  --panel-gray:#f4f0ed;
+  --cta-1:#e6c17e;
+  --cta-2:#c08f3e;
+  --cta-hover-1:#f2d7a3;
+  --cta-hover-2:#d3a052;
+  --badge-border:rgba(211,160,82,.6);
+}
+
+/* A foto hero oficial e o frasco recortado em retrato (642x1099, ~1:1.7).
+   No width:54% padrao de reviews.css ela passa de 600px de altura no desktop e
+   empurra o titulo da primeira secao para fora da primeira dobra. Limitar a
+   altura so no desktop alinha a proporcao com as demais reviews do site
+   (a regra mobile de reviews.css continua valendo abaixo de 768px). */
+@media (min-width: 768px) {
+  .hero-image img { width: auto; max-height: 380px; object-fit: contain; }
+}
