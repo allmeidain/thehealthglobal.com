@@ -1,0 +1,20 @@
+/* Neuro Serge Theme Overrides */
+:root {
+  --navy-1: #1c3f7a;
+  --navy-2: #0a2647;
+  --testimonial-navy: #14315c;
+  --panel-gray: #f2f5fa;
+  --cta-1: #22c55e;
+  --cta-2: #16a34a;
+  --cta-hover-1: #4ade80;
+  --cta-hover-2: #15803d;
+  --badge-border: rgba(34,197,94,.6);
+}
+
+/* Foto do produto (retrato/alongada) — reviews.css usa width:54% do container, o que
+   deixa a imagem excessivamente alta em fotos verticais como esta (1000x1821), empurrando
+   o titulo da primeira secao para fora da primeira dobra. Limitar a altura so no desktop
+   (a regra mobile de reviews.css continua valendo abaixo de 768px). */
+@media (min-width: 768px) {
+  .hero-image img { width: auto; max-height: 380px; object-fit: contain; }
+}
