@@ -1,0 +1,24 @@
+/* NerveAlive Theme Overrides
+   Paleta real extraida do CSS do site oficial nervealive.com
+   (wp-content/litespeed/css/a8d62bb25b73498ac444ba28df797ee3.css, curl em 2026-08-16):
+   azul institucional #0b4d8d (cor dominante), par de botoes ambar #ffb301 -> #ff9c00
+   com hover #ad6a00, mais o ciano do rotulo do frasco (#1f9cd8). */
+:root {
+  --navy-1: #0b4d8d;
+  --navy-2: #083561;
+  --testimonial-navy: #0a4176;
+  --panel-gray: #eef3f8;
+  --cta-1: #ffd25e;
+  --cta-2: #ffb301;
+  --cta-hover-1: #ffe08c;
+  --cta-hover-2: #ff9c00;
+  --badge-border: rgba(255, 179, 1, .6);
+}
+
+/* Selo do site oficial e botao flutuante herdam o ambar acima; o hover do selo
+   em reviews.css usa amarelo fixo do modelo, entao realinhamos com o ambar real. */
+.site-badge a:hover {
+  background: rgba(255, 179, 1, .2);
+  border-color: var(--cta-2);
+  box-shadow: 0 6px 20px rgba(255, 179, 1, .4);
+}
