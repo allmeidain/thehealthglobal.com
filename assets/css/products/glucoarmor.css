@@ -1,0 +1,21 @@
+/*
+  Paleta por produto -- Gluco Armor.
+  Sobrescreve os tokens de cor (:root) de ../reviews.css para refletir a
+  identidade visual real do rotulo oficial do produto (glycosafe.com),
+  mantendo layout/estrutura do MODELO REVIEW intactos (so cores mudam).
+  Rotulo do frasco: vermelho em degrade -- vermelho vira header/banner/
+  testimonial (--navy-*), dourado real do CTA "Order Now" da pagina oficial
+  (--bs-warning:#ffc107) vira CTA.
+  Tokens em data/produtos/glucoarmor.json -> theme_tokens.
+*/
+:root{
+  --navy-1:#c62828;
+  --navy-2:#7a1010;
+  --testimonial-navy:#8f1414;
+  --panel-gray:#f8e9e9;
+  --cta-1:#ffc107;
+  --cta-2:#e6a800;
+  --cta-hover-1:#ffd54f;
+  --cta-hover-2:#ffb300;
+  --badge-border:rgba(255,193,7,.6);
+}
