@@ -1,0 +1,41 @@
+/*
+  Paleta por produto -- NuraSlim.
+  Sobrescreve os tokens de cor (:root) de ../reviews.css para refletir a
+  identidade visual real da oferta, mantendo layout/estrutura do MODELO REVIEW
+  intactos (so as cores mudam).
+
+  Fonte dos tokens (curl em 2026-08-16, pagina oficial nuraslim.com):
+    --hero-text-accent / --coupon-accent-color: #53A179 (verde salvia, cor de
+      destaque real do site oficial)
+    --setup-primary-color / --ba-text-primary: #1c2b54 (navy escuro usado como
+      texto/estrutura primaria no site oficial)
+    --hero-background-color / --benefits-background: #FAFAFA
+    --award-border-color: #bdbdbd
+  Tokens tambem registrados em data/produtos/nuraslim.json -> theme_tokens.
+*/
+:root{
+  --navy-1:#1c2b54;
+  --navy-2:#0f1a38;
+  --testimonial-navy:#1c2b54;
+  --panel-gray:#FAFAFA;
+  --cta-1:#53A179;
+  --cta-2:#3d7a5c;
+  --cta-hover-1:#6bbd91;
+  --cta-hover-2:#468f68;
+  --badge-border:rgba(83,161,121,.6);
+}
+
+.site-badge a:hover{
+  background:rgba(83,161,121,.2);
+  border-color:var(--cta-1);
+  box-shadow:0 6px 20px rgba(83,161,121,.4);
+}
+
+/* A foto hero oficial (1100x1076, quase quadrada) no width:54% padrao de
+   reviews.css ainda passa de 640px de altura no desktop e empurra o titulo
+   da primeira secao para fora da primeira dobra (checado em viewport de
+   1280x900). Limitar a altura so no desktop mantem a regra mobile de
+   reviews.css intacta (ja trata fotos altas corretamente abaixo de 768px). */
+@media (min-width: 768px){
+  .hero-image img{width:auto;max-height:380px;object-fit:contain}
+}
