@@ -1,0 +1,31 @@
+/*
+  Paleta por produto -- Nitric Boost Ultra.
+  Sobrescreve os tokens de cor (:root) de ../reviews.css para refletir a
+  identidade visual real da oferta, mantendo layout/estrutura do MODELO REVIEW
+  intactos (so as cores mudam).
+
+  Fonte dos tokens (curl em 2026-08-16, getnitricboost.com):
+    - Rotulo do pote: preto/navy solido + faixa dourada "ULTRA" em gradiente.
+    - HTML inline da pagina de vendas tem 20+ ocorrencias de stops de
+      gradiente dourado (#FFD500, #FFAA00, #FFC400, #FFB100, #FFE500...),
+      usados nos botoes de compra reais -- a mesma faixa dourada visivel no
+      rotulo do produto.
+  Tokens tambem registrados em data/produtos/nitricboost.json -> theme_tokens.
+*/
+:root{
+  --navy-1:#0B1220;
+  --navy-2:#05080f;
+  --testimonial-navy:#0d1b33;
+  --panel-gray:#FAFAFA;
+  --cta-1:#FFD500;
+  --cta-2:#FF9100;
+  --cta-hover-1:#FFE500;
+  --cta-hover-2:#FFC400;
+  --badge-border:rgba(255,193,0,.6);
+}
+
+.site-badge a:hover{
+  background:rgba(255,193,0,.2);
+  border-color:var(--cta-1);
+  box-shadow:0 6px 20px rgba(255,193,0,.4);
+}
