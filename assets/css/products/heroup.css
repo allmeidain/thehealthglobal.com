@@ -1,0 +1,31 @@
+/*
+  Paleta por produto -- HeroUP.
+  Sobrescreve os tokens de cor (:root) de ../reviews.css para refletir a
+  identidade visual real da oferta, mantendo layout/estrutura do MODELO REVIEW
+  intactos (so as cores mudam).
+
+  Fonte dos tokens (curl em 2026-08-16, heroupofficial.com/assets/css/style.css
+  + rotulo oficial label.png):
+    #011643  cor dominante real do site (15 ocorrencias em style.css, fundo
+             de botoes/faixas)
+    #00b1f0  azul ciano de destaque real (.kit3 .kit-header -- cabecalho do
+             pacote "mais popular" -- e presente nos icones do rotulo)
+  Tokens tambem registrados em data/produtos/heroup.json -> theme_tokens.
+*/
+:root{
+  --navy-1:#011643;
+  --navy-2:#04091c;
+  --testimonial-navy:#0a1f52;
+  --panel-gray:#FAFAFA;
+  --cta-1:#00b1f0;
+  --cta-2:#0089c2;
+  --cta-hover-1:#3fc6f5;
+  --cta-hover-2:#00b1f0;
+  --badge-border:rgba(0,177,240,.6);
+}
+
+.site-badge a:hover{
+  background:rgba(0,177,240,.2);
+  border-color:var(--cta-1);
+  box-shadow:0 6px 20px rgba(0,177,240,.4);
+}
