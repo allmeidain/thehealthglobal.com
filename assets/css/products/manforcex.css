@@ -1,0 +1,34 @@
+/*
+  Paleta por produto -- ManForceX.
+  Sobrescreve os tokens de cor (:root) de ../reviews.css para refletir a
+  identidade visual real do rotulo oficial e da pagina de venda
+  (themanforcexhealth.online / getmanforcex.com), mantendo layout/estrutura
+  do MODELO REVIEW intactos (so cores mudam).
+  Rotulo do frasco: branco com faixa preto-carvao (#1f2124/#121212) e logo de
+  silhueta masculina -- o carvao vira barra superior, faixas H2 e cards de
+  depoimento (--navy-*). Os acentos dourados da pagina oficial (#c5a628/#6f571d)
+  viram o CTA e a borda do selo. O vermelho de fogo (#d92800) entra pela propria
+  foto hero, nao como cor de interface.
+  Tokens em data/produtos/manforcex.json -> theme_tokens.
+*/
+:root{
+  --navy-1:#2b2d31;
+  --navy-2:#121212;
+  --testimonial-navy:#1f2124;
+  --panel-gray:#f2f1ee;
+  --cta-1:#f2ce56;
+  --cta-2:#c5a628;
+  --cta-hover-1:#ffe184;
+  --cta-hover-2:#d9b62f;
+  --badge-border:rgba(197,166,40,.6);
+}
+
+/* A foto hero oficial e um composto quadrado (760x781: frasco + chamas + disco
+   vermelho de fundo). No width:54% padrao de reviews.css ela renderiza com mais
+   de 650px de altura no desktop e empurra o titulo da primeira secao para fora
+   da primeira dobra. Limitar a altura so no desktop deixa a proporcao alinhada
+   com as demais reviews do site (a regra mobile de reviews.css continua valendo
+   abaixo de 768px). */
+@media (min-width: 768px) {
+  .hero-image img { width: auto; max-height: 380px; object-fit: contain; }
+}
