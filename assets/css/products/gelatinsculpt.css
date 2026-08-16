@@ -1,0 +1,44 @@
+/*
+  Paleta por produto -- Gelatine Sculpt.
+  Sobrescreve os tokens de cor (:root) de ../reviews.css para refletir a
+  identidade visual real da oferta, mantendo layout/estrutura do MODELO REVIEW
+  intactos (so as cores mudam).
+
+  Fonte dos tokens (curl em 2026-08-16, pagina oficial gelatinesculpt.com):
+    - Rotulo do frasco (imagens oficiais do produto): magenta/pink #D1336C
+      solido no corpo do rotulo, degrade para tom mais claro no topo.
+    - Headlines da pagina de vendas usam <span style="color:#D1336C"> para
+      destacar o nome do produto e o apelido "Bariatric Jelly".
+    - Fundo de botao elementor padrao do tema: #32373c (cinza-chumbo escuro).
+  A folha de estilo elementor da pagina nao carregou via curl (sem <link
+  rel="stylesheet"> no <head> capturado), entao o fundo escuro do cabecalho/
+  faixas H2 foi escolhido como um vinho/bordo escuro que harmoniza com o
+  rotulo pink do produto, em vez de reaproveitar o navy generico de outro
+  produto. Tokens tambem registrados em data/produtos/gelatinsculpt.json ->
+  theme_tokens.
+*/
+:root{
+  --navy-1:#2b0f1e;
+  --navy-2:#160810;
+  --testimonial-navy:#3a0f26;
+  --panel-gray:#FAFAFA;
+  --cta-1:#E14D8A;
+  --cta-2:#D1336C;
+  --cta-hover-1:#ED74A4;
+  --cta-hover-2:#E14D8A;
+  --badge-border:rgba(209,51,108,.6);
+}
+
+.site-badge a:hover{
+  background:rgba(209,51,108,.2);
+  border-color:var(--cta-1);
+  box-shadow:0 6px 20px rgba(209,51,108,.4);
+}
+
+/* A foto hero oficial (683x1024, retrato alongado) no width:54% padrao de
+   reviews.css passa muito de 640px de altura no desktop e empurra o titulo
+   da primeira secao para fora da primeira dobra. Limitar a altura so no
+   desktop mantem a regra mobile de reviews.css intacta. */
+@media (min-width: 768px){
+  .hero-image img{width:auto;max-height:380px;object-fit:contain}
+}
