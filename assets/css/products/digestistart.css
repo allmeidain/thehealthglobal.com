@@ -1,0 +1,53 @@
+/*
+  Paleta por produto -- DigestiStart.
+  Sobrescreve os tokens de cor (:root) de ../reviews.css para refletir a
+  identidade visual real da oferta, mantendo layout/estrutura do MODELO REVIEW
+  intactos (so as cores mudam).
+
+  Fonte dos tokens (curl em 2026-08-16):
+    - https://thedigestistart.com/statics/css/style.css
+        #2f4e2d  faixas e blocos escuros do site oficial
+        #437a3f  blocos verdes intermediarios
+        #559651  verde de destaque (numeros dos pacotes, fundo do player)
+        #e6f3e5  fundo verde-claro do painel de precos
+        gradiente do botao de compra: rgba(226,190,0) -> rgba(255,228,86)
+        #eefe3c  amarelo de acento (.accent-yellow)
+    - https://thedigestistart.com/statics/img/buy-now.png
+        amostragem do botao real: #ffe456 (topo) -> #ffd701 (base), texto preto
+    - https://thedigestistart.com/statics/img/label.png
+        rotulo: onda verde escura #152615 / #2e4d2a sobre creme, arco dourado #91724f
+
+  O verde vira barra superior, faixas H2 e cards de depoimento; o verde-claro do
+  painel de precos vira o fundo da secao de conteudo; o amarelo real do botao de
+  compra vira CTA e borda do selo -- mantendo o texto preto legivel, como no
+  botao oficial. Tokens tambem em data/produtos/digestistart.json -> theme_tokens.
+*/
+:root{
+  --navy-1:#437a3f;
+  --navy-2:#2f4e2d;
+  --testimonial-navy:#3a6636;
+  --panel-gray:#e6f3e5;
+  --cta-1:#ffe456;
+  --cta-2:#ffd701;
+  --cta-hover-1:#f6ff8a;
+  --cta-hover-2:#eefe3c;
+  --badge-border:rgba(238,254,60,.6);
+}
+
+/* O hover do selo em reviews.css usa o amarelo fixo do MODELO REVIEW;
+   realinhamos com o amarelo real do botao oficial da oferta. */
+.site-badge a:hover{
+  background:rgba(238,254,60,.2);
+  border-color:var(--cta-2);
+  box-shadow:0 6px 20px rgba(255,215,1,.4);
+}
+
+/* A foto hero oficial e um par de frascos em 1506x1394 (~1.08:1). No width:54%
+   padrao de reviews.css ela passa de 600px de altura no desktop e empurra o
+   titulo da primeira secao para fora da primeira dobra (checado em viewport de
+   1280x900). Limitar a altura so no desktop alinha a proporcao com as demais
+   reviews do site (a regra mobile de reviews.css continua valendo abaixo de
+   768px). */
+@media (min-width: 768px){
+  .hero-image img{width:auto;max-height:380px;object-fit:contain}
+}
