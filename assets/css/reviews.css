@@ -24,6 +24,7 @@
   --radius:20px;
   --radius-btn:10px;
   --maxw:1219px;
+  --header-h:182px; /* altura real do .top-bar no desktop (medida em producao) -- usada para dimensionar .hero-image */
   --font-brand:"Montserrat", sans-serif;
   --font-heading:"Poppins", sans-serif;
   --font-body:"Poppins", sans-serif;
@@ -59,8 +60,14 @@ a{color:inherit}
 .btn:active{transform:translateY(-1px) scale(.99)}
 
 /* ---- Foto do produto, logo abaixo da barra superior ---- */
-.hero-image{padding:24px 0;text-align:center;background:var(--paper)}
-.hero-image img{width:54%;margin:0 auto;border-radius:var(--radius)}
+/* Regra: no desktop, a secao hero deve ter o DOBRO da altura do cabecalho
+   (--header-h * 2). Altura fixa em px (nao % do container) e object-fit:contain
+   para o resultado nao depender da resolucao/proporcao real do arquivo de
+   imagem de cada produto -- width:% aqui resolveria contra o proprio
+   tamanho intrinseco da imagem (o <a> pai e inline-block/shrink-to-fit),
+   dando fotos hero minusculas para produtos com imagem-fonte pequena. */
+.hero-image{padding:24px 0;text-align:center;background:var(--paper);display:flex;align-items:center;justify-content:center;min-height:calc(var(--header-h) * 2)}
+.hero-image img{width:auto;height:auto;max-height:calc(var(--header-h) * 2 - 48px);max-width:70%;margin:0 auto;border-radius:var(--radius);object-fit:contain}
 .hero-image a{display:inline-block;max-width:100%;text-align:center}
 
 /* ---- Secao de conteudo: fundo cinza claro com "cartao" branco central ---- */
@@ -144,7 +151,7 @@ body{padding-bottom:90px} /* espaco para o botao flutuante nao cobrir o rodape *
   .top-bar .site-badge{margin-top:6px;margin-bottom:2px}
   .btn{font-size:17px;line-height:1.2em;padding:13px 26px}
   .site-badge a{font-size:13px;padding:5px 14px}
-  .hero-image{padding:6px 0}
+  .hero-image{padding:6px 0;min-height:0}
   .hero-image img{width:auto;max-width:190px;max-height:190px;object-fit:contain}
   .content-section{padding:10px 0 80px}
   .content-card h2{font-size:25px;line-height:1.3em;padding:10px 20px}
