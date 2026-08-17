@@ -1,0 +1,42 @@
+/*
+  Paleta por produto -- Spartamax.
+  Sobrescreve os tokens de cor (:root) de ../reviews.css para refletir a
+  identidade visual real da oferta, mantendo layout/estrutura do MODELO REVIEW
+  intactos (so as cores mudam).
+
+  Fonte dos tokens (curl em 2026-08-16, GetSpartamax.com/assets/css/sm-base.css
+  + rotulo real do produto):
+    #d41d29 / #e7303f / #b30000  vermelhos reais do CSS oficial, coincidem com
+      o vermelho do diamante "30 GUMMIES" e das gomas visiveis no rotulo
+    #ffc823  dourado real do CSS oficial, usado so como badge-border aqui para
+      nao colidir com a paleta preto+dourado ja usada na review do Nitric
+      Boost Ultra no mesmo site (mesmo nicho, produto diferente)
+*/
+:root{
+  --navy-1:#1a1414;
+  --navy-2:#0d0808;
+  --testimonial-navy:#1a1414;
+  --panel-gray:#FAFAFA;
+  --cta-1:#E7303F;
+  --cta-2:#B30000;
+  --cta-hover-1:#FF4D5A;
+  --cta-hover-2:#E7303F;
+  --badge-border:rgba(255,200,35,.6);
+}
+
+.site-badge a:hover{
+  background:rgba(231,48,63,.2);
+  border-color:var(--cta-1);
+  box-shadow:0 6px 20px rgba(231,48,63,.4);
+}
+
+/* O .hero-image img{width:54%} de reviews.css fica dentro de um <a
+   display:inline-block> sem largura propria -- a % nao tem containing block
+   definido e o Chrome resolve contra a largura intrinseca da propria imagem,
+   nao contra o container visual. Como a foto oficial do Spartamax e um canvas
+   589x424 baixo (o pote ocupa so ~30% da largura), o resultado renderizava
+   minusculo (~94px) no desktop. Fixando altura em px (sem %) contorna a
+   circularidade, no mesmo padrao ja usado em digestistart/manforcex/etc. */
+@media (min-width: 768px){
+  .hero-image img{width:auto;max-height:380px;object-fit:contain}
+}
