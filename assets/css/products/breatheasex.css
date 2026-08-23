@@ -1,0 +1,21 @@
+/*
+  Paleta por produto -- BreathEaseX.
+  Sobrescreve os tokens de cor (:root) de ../reviews.css para refletir a
+  identidade visual real da pagina oficial (https://breatheasex.com/),
+  mantendo layout/estrutura do MODELO REVIEW intactos.
+  Mesma paleta ja usada em healthreview.blog/assets/css/products/breatheasex.css
+  (produto global -- tokens reaproveitados, nao re-extraidos):
+  teal escuro (#0A7E8C / #144143) com CTA amarelo (#fbf124 / #fbbf24) e
+  accent ciano (#0ABAB5).
+*/
+:root{
+  --navy-1:#0A7E8C;
+  --navy-2:#144143;
+  --testimonial-navy:#144143;
+  --panel-gray:#e8f5f4;
+  --cta-1:#fbf124;
+  --cta-2:#fbbf24;
+  --cta-hover-1:#facc15;
+  --cta-hover-2:#f59e0b;
+  --badge-border:#0ABAB5;
+}
