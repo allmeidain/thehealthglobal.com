@@ -1,0 +1,19 @@
+/*
+  Paleta por produto -- Visium Pro.
+  Sobrescreve os tokens de cor (:root) de ../reviews.css para refletir a
+  identidade visual real da pagina oficial (https://visiumpro.com/discover/ROOT-L3/),
+  mantendo layout/estrutura do MODELO REVIEW intactos (so cores mudam).
+  Tokens extraidos das variaveis CSS reais do site (curl + grep, nao WebFetch),
+  ver data/produtos/visium-pro.json -> theme_tokens.
+*/
+:root{
+  --navy-1:#0A7E8C;
+  --navy-2:#042f34;
+  --testimonial-navy:#075E66;
+  --panel-gray:#E1F5F5;
+  --cta-1:#f9c016;
+  --cta-2:#ffc107;
+  --cta-hover-1:#ffe066;
+  --cta-hover-2:#f5c518;
+  --badge-border:rgba(249,192,22,.6);
+}
