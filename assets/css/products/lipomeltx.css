@@ -1,0 +1,19 @@
+/*
+  Paleta por produto -- LipoMeltX.
+  Sobrescreve os tokens de cor (:root) de ../reviews.css para refletir a
+  identidade visual real da pagina oficial (https://lipomeltx.com/about/?aff_id=362),
+  mantendo layout/estrutura do MODELO REVIEW intactos (so cores mudam).
+  Tokens extraidos das variaveis CSS reais do site (curl + grep, nao WebFetch),
+  ver data/produtos/lipomeltx.json -> theme_tokens.
+*/
+:root{
+  --navy-1:#5c145a;
+  --navy-2:#360b3d;
+  --testimonial-navy:#49104c;
+  --panel-gray:#f9f0f7;
+  --cta-1:#f5c518;
+  --cta-2:#e67e00;
+  --cta-hover-1:#ffe168;
+  --cta-hover-2:#f5c518;
+  --badge-border:rgba(255,53,53,.6);
+}

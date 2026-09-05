@@ -1,0 +1,12 @@
+/* ProstAfense Theme Overrides */
+:root {
+  --navy-1: #0a2b22;
+  --navy-2: #041712;
+  --testimonial-navy: #0e3329;
+  --panel-gray: #f2faf6;
+  --cta-1: #ffe168;
+  --cta-2: #f5c518;
+  --cta-hover-1: #f5c518;
+  --cta-hover-2: #d9a812;
+  --badge-border: rgba(34,181,115,.6);
+}

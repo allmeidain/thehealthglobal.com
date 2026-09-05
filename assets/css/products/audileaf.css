@@ -1,0 +1,19 @@
+/*
+  Paleta por produto -- AudiLeaf.
+  Sobrescreve os tokens de cor (:root) de ../reviews.css para refletir a
+  identidade visual real da pagina oficial (https://audileaf.com/about/?aff_id=962),
+  mantendo layout/estrutura do MODELO REVIEW intactos (so cores mudam).
+  Tokens extraidos das variaveis CSS reais do site (curl + grep, nao WebFetch),
+  ver data/produtos/audileaf.json -> theme_tokens.
+*/
+:root{
+  --navy-1:#0c6e63;
+  --navy-2:#04211d;
+  --testimonial-navy:#073430;
+  --panel-gray:#EAF8F5;
+  --cta-1:#F5C518;
+  --cta-2:#E67E00;
+  --cta-hover-1:#FFE168;
+  --cta-hover-2:#F5C518;
+  --badge-border:rgba(245,197,24,.6);
+}

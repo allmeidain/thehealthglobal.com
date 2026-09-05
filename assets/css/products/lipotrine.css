@@ -1,0 +1,12 @@
+/* Lipotrine Theme Overrides */
+:root {
+  --navy-1: #86294b;
+  --navy-2: #5c1a34;
+  --testimonial-navy: #7a2246;
+  --panel-gray: #fdf0f5;
+  --cta-1: #ffd814;
+  --cta-2: #ffc700;
+  --cta-hover-1: #f7ca00;
+  --cta-hover-2: #f0b400;
+  --badge-border: rgba(255, 216, 20, .6);
+}

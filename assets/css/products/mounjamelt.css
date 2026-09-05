@@ -1,0 +1,19 @@
+/*
+  Paleta por produto -- MounjaMelt.
+  Sobrescreve os tokens de cor (:root) de ../reviews.css para refletir a
+  identidade visual real da pagina oficial (https://mounjamelt.com/about/?aff_id=606),
+  mantendo layout/estrutura do MODELO REVIEW intactos (so cores mudam).
+  Tokens extraidos das variaveis CSS reais do site (curl + grep, nao WebFetch),
+  ver data/produtos/mounjamelt.json -> theme_tokens.
+*/
+:root{
+  --navy-1:#4f5e26;
+  --navy-2:#203622;
+  --testimonial-navy:#264829;
+  --panel-gray:#f8f8f8;
+  --cta-1:#8bec23;
+  --cta-2:#599022;
+  --cta-hover-1:#aaee3d;
+  --cta-hover-2:#8bec23;
+  --badge-border:rgba(89,144,34,.6);
+}

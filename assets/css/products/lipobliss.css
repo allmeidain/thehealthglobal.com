@@ -1,0 +1,12 @@
+/* LipoBliss Theme Overrides */
+:root {
+  --navy-1: #0a2016;
+  --navy-2: #0f2f1f;
+  --testimonial-navy: #143b28;
+  --panel-gray: #eafcf1;
+  --cta-1: #f5c518;
+  --cta-2: #f5c518;
+  --cta-hover-1: #e5b508;
+  --cta-hover-2: #e5b508;
+  --badge-border: #82dba0;
+}

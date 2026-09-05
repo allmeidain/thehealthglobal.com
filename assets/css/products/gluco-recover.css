@@ -1,0 +1,19 @@
+/*
+  Paleta por produto -- Gluco Recover.
+  Sobrescreve os tokens de cor (:root) de ../reviews.css para refletir a
+  identidade visual real da TSL oficial (https://glucorecover.com/gts/search/?aff_id=1686),
+  mantendo layout/estrutura do MODELO REVIEW intactos (so cores mudam).
+  Tokens extraidos das variaveis/cores reais do site (curl + grep, nao WebFetch),
+  ver data/produtos/gluco-recover.json -> identidade_visual.paleta.
+*/
+:root{
+  --navy-1:#0c3b6e;
+  --navy-2:#041220;
+  --testimonial-navy:#071e33;
+  --panel-gray:#eef5fb;
+  --cta-1:#f9c016;
+  --cta-2:#ffc107;
+  --cta-hover-1:#ffe066;
+  --cta-hover-2:#f5c518;
+  --badge-border:rgba(249,192,22,.6);
+}
