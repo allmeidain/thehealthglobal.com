@@ -1,0 +1,19 @@
+/*
+  Paleta por produto -- NervoLyn.
+  Sobrescreve os tokens de cor (:root) de ../reviews.css para refletir a
+  identidade visual real da TSL oficial (https://nervolyn.com/about/?aff_id=3618),
+  mantendo layout/estrutura do MODELO REVIEW intactos (so cores mudam).
+  Tokens extraidos das variaveis CSS reais do site (curl + grep, nao WebFetch),
+  ver data/produtos/nervolyn.json -> theme_tokens.
+*/
+:root{
+  --navy-1:#4c2e8f;
+  --navy-2:#1e1033;
+  --testimonial-navy:#3a2265;
+  --panel-gray:#F3ECFD;
+  --cta-1:#F5C518;
+  --cta-2:#E67E00;
+  --cta-hover-1:#FFE168;
+  --cta-hover-2:#F5C518;
+  --badge-border:rgba(245,197,24,.6);
+}
