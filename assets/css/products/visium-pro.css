@@ -1,19 +1,16 @@
-/*
-  Paleta por produto -- Visium Pro.
-  Sobrescreve os tokens de cor (:root) de ../reviews.css para refletir a
-  identidade visual real da pagina oficial (https://visiumpro.com/discover/ROOT-L3/),
-  mantendo layout/estrutura do MODELO REVIEW intactos (so cores mudam).
-  Tokens extraidos das variaveis CSS reais do site (curl + grep, nao WebFetch),
-  ver data/produtos/visium-pro.json -> theme_tokens.
-*/
-:root{
-  --navy-1:#0A7E8C;
-  --navy-2:#042f34;
-  --testimonial-navy:#075E66;
-  --panel-gray:#E1F5F5;
-  --cta-1:#f9c016;
-  --cta-2:#ffc107;
-  --cta-hover-1:#ffe066;
-  --cta-hover-2:#f5c518;
-  --badge-border:rgba(249,192,22,.6);
+/* Visium Pro Official Cobalt Slate Blue & Gold Theme */
+:root {
+  --navy-1: #294277;
+  --navy-2: #8290c6;
+  --testimonial-navy: #294277;
+  --panel-gray: #F0F3FA;
+  --cta-1: #FFC107;
+  --cta-2: #F9C016;
+  --cta-hover-1: #FFE066;
+  --cta-hover-2: #FFC107;
+  --badge-border: rgba(232, 194, 57, 0.6);
+}
+
+.top-bar {
+  background: linear-gradient(135deg, #294277 0%, #8290c6 100%) !important;
 }
