@@ -1,0 +1,11 @@
+/* Tokens de cores extraídos da identidade oficial do produto */
+:root {
+  --navy-1: #078C88;
+  --navy-2: #078C88;
+  --cta-1: #C9963E;
+  --cta-2: #C9963E;
+  --cta-hover-1: #C9963E;
+  --cta-hover-2: #C9963E;
+  --testimonial-navy: #078C88;
+  --badge-border: rgba(201, 150, 62, 0.6);
+}
