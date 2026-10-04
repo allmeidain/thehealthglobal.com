@@ -1,0 +1,12 @@
+/* Tokens de cores extraídos da identidade oficial do produto (bakingslim.com/dtc/) */
+:root {
+  --navy-1: #9B490B;
+  --navy-2: #D7640C;
+  --cta-1: #FFC107;
+  --cta-2: #F9A03F;
+  --cta-hover-1: #F9C016;
+  --cta-hover-2: #D7640C;
+  --testimonial-navy: #7A3606;
+  --panel-gray: #FFF8F2;
+  --badge-border: rgba(215, 100, 12, 0.6);
+}
