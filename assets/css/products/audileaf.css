@@ -1,19 +1,80 @@
-/*
-  Paleta por produto -- AudiLeaf.
-  Sobrescreve os tokens de cor (:root) de ../reviews.css para refletir a
-  identidade visual real da pagina oficial (https://audileaf.com/about/?aff_id=962),
-  mantendo layout/estrutura do MODELO REVIEW intactos (so cores mudam).
-  Tokens extraidos das variaveis CSS reais do site (curl + grep, nao WebFetch),
-  ver data/produtos/audileaf.json -> theme_tokens.
-*/
-:root{
-  --navy-1:#0c6e63;
-  --navy-2:#04211d;
-  --testimonial-navy:#073430;
-  --panel-gray:#EAF8F5;
-  --cta-1:#F5C518;
-  --cta-2:#E67E00;
-  --cta-hover-1:#FFE168;
-  --cta-hover-2:#F5C518;
-  --badge-border:rgba(245,197,24,.6);
+/* AudiLeaf Official Natural Herbal Teal & Gold Theme */
+:root {
+  --navy-1: #0c6e63;
+  --navy-2: #04211d;
+  --testimonial-navy: #073430;
+  --panel-gray: #EAF8F5;
+  --cta-1: #F5C518;
+  --cta-2: #E67E00;
+  --cta-hover-1: #FFE168;
+  --cta-hover-2: #F5C518;
+  --badge-border: rgba(245, 197, 24, 0.6);
+}
+
+/* Dimensões e destaque visual aprimorado para o produto AudiLeaf */
+.hero-image {
+  padding: 30px 0 20px;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-image a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+}
+.hero-image img {
+  width: auto;
+  height: auto;
+  max-height: 440px;
+  max-width: min(580px, 90vw);
+  object-fit: contain;
+  filter: drop-shadow(0 10px 25px rgba(4, 33, 29, 0.12));
+  transition: transform 0.3s ease;
+}
+.hero-image img:hover {
+  transform: scale(1.03);
+}
+
+/* Imagem do Kit Oficial (6 frascos) com proporção nobre e nítida */
+.inline-figure {
+  text-align: center;
+  padding: 24px 20px 35px;
+}
+.inline-figure a {
+  display: inline-block;
+  max-width: 100%;
+}
+.inline-figure img {
+  max-width: 580px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  filter: drop-shadow(0 12px 28px rgba(4, 33, 29, 0.15));
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+.inline-figure img:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 767px) {
+  .hero-image {
+    padding: 16px 0 10px;
+    min-height: 0;
+  }
+  .hero-image img {
+    width: 82%;
+    max-width: 330px;
+    max-height: 340px;
+  }
+  .inline-figure {
+    padding: 15px 15px 25px;
+  }
+  .inline-figure img {
+    max-width: 100%;
+    width: 100%;
+  }
 }

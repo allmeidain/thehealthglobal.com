@@ -66,9 +66,10 @@ a{color:inherit}
    imagem de cada produto -- width:% aqui resolveria contra o proprio
    tamanho intrinseco da imagem (o <a> pai e inline-block/shrink-to-fit),
    dando fotos hero minusculas para produtos com imagem-fonte pequena. */
-.hero-image{padding:24px 0;text-align:center;background:var(--paper);display:flex;align-items:center;justify-content:center;min-height:calc(var(--header-h) * 2)}
-.hero-image img{width:auto;height:auto;max-height:calc(var(--header-h) * 2 - 48px);max-width:70%;margin:0 auto;border-radius:var(--radius);object-fit:contain}
-.hero-image a{display:inline-block;max-width:100%;text-align:center}
+.hero-image{padding:30px 0 20px;text-align:center;background:var(--paper);display:flex;align-items:center;justify-content:center;min-height:420px}
+.hero-image a{display:inline-flex;justify-content:center;align-items:center;max-width:100%}
+.hero-image img{width:auto;height:auto;max-height:440px;max-width:min(580px, 90vw);margin:0 auto;border-radius:var(--radius);object-fit:contain;filter:drop-shadow(0 10px 25px rgba(0,0,0,.12));transition:transform .3s ease}
+.hero-image img:hover{transform:scale(1.03)}
 
 /* ---- Secao de conteudo: fundo cinza claro com "cartao" branco central ---- */
 .content-section{background:var(--panel-gray);padding:30px 0 90px}
@@ -88,9 +89,10 @@ a{color:inherit}
 .content-card .block-body h3:first-child{margin-top:0}
 .content-card .block-body .updated-note{font-size:.85rem;color:var(--muted);margin-bottom:24px}
 
-.inline-figure{text-align:center;padding:10px 30px 30px}
+.inline-figure{text-align:center;padding:24px 20px 35px}
 .inline-figure a{display:inline-block;max-width:100%;text-align:center}
-.inline-figure img{max-width:280px;margin:0 auto}
+.inline-figure img{max-width:580px;width:100%;height:auto;margin:0 auto;filter:drop-shadow(0 12px 28px rgba(0,0,0,.15));border-radius:12px;transition:transform .3s ease}
+.inline-figure img:hover{transform:scale(1.02)}
 .inline-figure figcaption{font-family:"Roboto",sans-serif;font-size:.78rem;color:var(--muted);margin-top:8px}
 
 /* ---- Tabela comparativa (usada quando a copy exige comparacao/pacotes -- SEO/GEO/AEO) ---- */
@@ -151,14 +153,14 @@ body{padding-bottom:90px} /* espaco para o botao flutuante nao cobrir o rodape *
   .top-bar .site-badge{margin-top:6px;margin-bottom:2px}
   .btn{font-size:17px;line-height:1.2em;padding:13px 26px}
   .site-badge a{font-size:13px;padding:5px 14px}
-  .hero-image{padding:6px 0;min-height:0}
-  .hero-image img{width:auto;max-width:190px;max-height:190px;object-fit:contain}
-  .content-section{padding:10px 0 80px}
+  .hero-image{padding:16px 0 10px;min-height:0}
+  .hero-image img{width:82%;max-width:330px;max-height:340px;object-fit:contain}
+  .content-section{padding:12px 0 80px}
   .content-card h2{font-size:25px;line-height:1.3em;padding:10px 20px}
   .content-card .block-body{font-size:16px;line-height:1.4em;padding:18px 20px;text-align:center}
   .content-card .block-body ul{text-align:left}
-  .inline-figure{padding:10px 20px 25px}
-  .inline-figure img{max-width:220px;width:auto;margin:0 auto}
+  .inline-figure{padding:15px 15px 25px}
+  .inline-figure img{max-width:100%;width:100%;height:auto;margin:0 auto}
   .testimonials-grid{grid-template-columns:1fr}
   .legal-disclaimer{font-size:10px;padding:0 16px}
   .footer-links{grid-template-columns:1fr;gap:4px}
